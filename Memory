@@ -1,0 +1,25 @@
+const colors = ['red', 'blue', 'green', 'yellow'];
+let sequence = [];
+let userSequence = [];
+let level = 1;
+
+function startGame() {
+    sequence = [];
+    for (let i = 0; i < level; i++) {
+        sequence.push(colors[Math.floor(Math.random() * colors.length)]);
+    }
+    console.log(sequence);
+}
+
+function checkSequence() {
+    if (userSequence.join('') === sequence.join('')) {
+        console.log('Correct! Next level...');
+        level++;
+        startGame();
+    } else {
+        console.log('Incorrect! Game over.');
+        level = 1;
+    }
+}
+
+startGame();
