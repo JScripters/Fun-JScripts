@@ -1,1 +1,3 @@
-v1
+{
+  "currentversion": "1.0.0"
+}
